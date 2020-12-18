@@ -1,0 +1,26 @@
+h1{
+ text-align:center;   
+}
+.blocks{
+    background-color:white;
+    width:100px;
+    height:100px;
+}
+.board{
+    display:inline-grid;
+    background-color:black;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    margin:auto;
+}
+.centerThis{
+    margin:auto;
+    width:fit-content;
+    border-width:10px;
+    border-color:black;
+}
+button{
+    display:block;
+    margin:auto;
+    margin-bottom:50px;
+}
