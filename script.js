@@ -21,6 +21,8 @@ setGrid.addEventListener("click", ()=>{
     board.style.setProperty("grid-template-columns", str);
 
     let tmp = gridSize * gridSize;
+
+
     for(let i = 0; i < tmp; i++){
         let newDiv = document.createElement("div");
         newDiv.classList.add("blocks");
@@ -28,16 +30,19 @@ setGrid.addEventListener("click", ()=>{
     }
    
     divs = document.querySelectorAll(".blocks");
-    console.log(divs.length);
     for(let i = 0; i < divs.length; i++){
         divs[i].addEventListener("mousedown", changeColor1);
         divs[i].addEventListener("mousemove", changeColor2);
         divs[i].addEventListener("mouseup", changeColor3);
         divs[i].style.backgroundColor="white";
+        divs[i].style.width=""+500/gridSize+"px";
+        divs[i].style.height=""+500/gridSize+"px";
     }
 });
 clear.addEventListener("click", ()=>{
-    centerThis.removeChild(board);
+    for(let i = 0; i < divs.length; i++){
+        divs[i].style.backgroundColor="white";
+    }
 });
 
 let isTrue = false;

@@ -2,6 +2,7 @@ h1{
  text-align:center;   
 }
 .blocks{
+    box-sizing:border-box;
     background-color:white;
     width:100px;
     height:100px;
@@ -20,6 +21,8 @@ h1{
     width:fit-content;
     border-style:solid;
     border-width:5px;
+    width:500px;
+    height:500px;
     border-color:black;
 }
 button{
